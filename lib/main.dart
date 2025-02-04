@@ -16,14 +16,19 @@ class MyApp extends StatelessWidget {
       ),
 
       home:Scaffold(
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.red[50],
         appBar: AppBar(
           backgroundColor: Colors.green,
           title: Center(child: Text("Mon application")),
         ),
 
         body: Container(
-          child: te
+          child: Text("Gallery",
+          style: TextStyle(
+            fontSize: 30,
+            color: Colors.green[500],
+            fontWeight: FontWeight.w900,
+          )),
         ),
       ) ,
     );
