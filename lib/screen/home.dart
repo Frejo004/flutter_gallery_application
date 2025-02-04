@@ -10,7 +10,18 @@ class MainController extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Gallery(),
+        Container(
+          decoration: BoxDecoration(
+          border: Border.all(width: 10, color: Colors.purple),
+        ),
+        child: SizedBox(
+          height: 200,
+          width: 300,
+          child: Gallery(),
+        ),
+        ),
+        SizedBox(
+          height:200),
         Categories(),
       ],
     );
