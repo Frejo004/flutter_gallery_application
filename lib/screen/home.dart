@@ -60,8 +60,33 @@ class Gallery extends StatelessWidget {
         ),
         Row(
           children: [
-            GalleryCard(),
+            GalleryCard(
+              icon: Icons.diamond_outlined,
+              title: "Shrine",
+              description: 'Shine is a beautilful app',
+              color: Colors.brown[200],
+              ),
 
+            GalleryCard(
+              icon: Icons.diamond_outlined,
+              title: "Shrine",
+              description: 'Shine is a beautilful app',
+              color: Colors.yellow[200],
+              ),
+
+            GalleryCard(
+              icon: Icons.diamond_outlined,
+              title: "Shrine",
+              description: 'Shine is a beautilful app',
+              color: Colors.blue[200],
+              ),
+
+            GalleryCard(
+              icon: Icons.diamond_outlined,
+              title: "Shrine",
+              description: 'Shine is a beautilful app',
+              color: Colors.brown[200],
+              ),
           ],
         ),
       ],
@@ -73,7 +98,7 @@ class GalleryCard extends StatelessWidget {
     final  IconData icon;
     final String title;
     final String description;
-    final Color color;
+    final Color? color;
 
     
   const GalleryCard({
@@ -91,7 +116,7 @@ class GalleryCard extends StatelessWidget {
       height: 200,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
-        color: Colors.brown[100],
+        color: color,
       ),
       child: Padding(
         padding: const EdgeInsets.all(26.0),
@@ -99,15 +124,15 @@ class GalleryCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start ,
         children: [
-        Icon(Icons.diamond_outlined, size: 80,),
+        Icon(icon, size: 80,),
         const Spacer(),
-        Text("Shrine",
+        Text(title,
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 22
           ),
           ),
-        Text("The fashionable retail app"),
+        Text(description),
       ]),
     ),
       );
