@@ -70,7 +70,17 @@ class Gallery extends StatelessWidget {
 }
 
 class GalleryCard extends StatelessWidget {
+    final  IconData icon;
+    final String title;
+    final String description;
+    final Color color;
+
+    
   const GalleryCard({
+    required this.icon,
+    required this.title,
+    required this.description,
+    required this.color,
     super.key,
   });
 
