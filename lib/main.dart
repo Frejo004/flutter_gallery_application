@@ -16,13 +16,28 @@ class MyApp extends StatelessWidget {
       ),
 
       home:Scaffold(
-        backgroundColor: Colors.red[50],
+        backgroundColor: const Color.fromARGB(255, 179, 97, 109),
         appBar: AppBar(
           backgroundColor: Colors.green,
           title: Center(child: Text("Mon application")),
         ),
 
-        body: Container(
+        body: MainController(),
+      ) ,
+    );
+  }
+}
+
+class MainController extends StatelessWidget {
+  const MainController({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
           child: Text("Gallery",
           style: TextStyle(
             fontSize: 30,
@@ -30,7 +45,15 @@ class MyApp extends StatelessWidget {
             fontWeight: FontWeight.w900,
           )),
         ),
-      ) ,
+        Container(
+          child: Text("Categories",
+          style: TextStyle(
+            fontSize: 30,
+            color: Colors.red[500],
+            fontWeight: FontWeight.w900,
+          )),
+        ),
+      ],
     );
   }
 }
