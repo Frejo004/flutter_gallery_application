@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class MainController extends StatelessWidget {
   const MainController({
     super.key,
@@ -9,26 +8,18 @@ class MainController extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      //alligner les éléments au début crossAxisAlignment
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          decoration: BoxDecoration(
-          border: Border.all(width: 5, color: Colors.purple),
-        ),
-        child: SizedBox(
-          height: 200,
-          width: 300,
           child: Gallery(),
         ),
-        ),
-        SizedBox(
-          height:200),
+        
+        SizedBox(height: 200),
 
         Container(
-          decoration: BoxDecoration(
-          border: Border.all(width: 5, color: Colors.yellow),
-        ),
           child: Categories(),
-          ),
+        ),
       ],
     );
   }
@@ -43,11 +34,11 @@ class Categories extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Text("Categories",
-      style: TextStyle(
-        fontSize: 30,
-        color: Colors.red[500],
-        fontWeight: FontWeight.w900,
-      )),
+          style: TextStyle(
+            fontSize: 30,
+            color: Colors.red[500],
+            fontWeight: FontWeight.w900,
+          )),
     );
   }
 }
@@ -59,13 +50,17 @@ class Gallery extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text("Gallery",
-      style: TextStyle(
-        fontSize: 30,
-        color: Colors.green[500],
-        fontWeight: FontWeight.w900,
-      )),
+    return Column(
+      children: [
+        Container(
+          child: Text("Gallery",
+              style: TextStyle(
+                fontSize: 30,
+                color: Colors.green[500],
+                fontWeight: FontWeight.w900,
+              )),
+        ),
+      ],
     );
   }
 }
