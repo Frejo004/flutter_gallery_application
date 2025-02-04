@@ -14,9 +14,7 @@ class MainController extends StatelessWidget {
         Container(
           child: Gallery(),
         ),
-        
         SizedBox(height: 200),
-
         Container(
           child: Categories(),
         ),
@@ -60,7 +58,48 @@ class Gallery extends StatelessWidget {
                 fontWeight: FontWeight.w900,
               )),
         ),
+        Row(
+          children: [
+            GalleryCard(),
+
+          ],
+        ),
       ],
     );
+  }
+}
+
+class GalleryCard extends StatelessWidget {
+  const GalleryCard({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 300,
+      height: 200,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12),
+        color: Colors.brown[100],
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(26.0),
+    
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start ,
+        children: [
+        Icon(Icons.diamond_outlined, size: 80,),
+        const Spacer(),
+        Text("Shrine",
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 22
+          ),
+          ),
+        Text("The fashionable retail app"),
+      ]),
+    ),
+      );
   }
 }
