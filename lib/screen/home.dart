@@ -12,7 +12,7 @@ class MainController extends StatelessWidget {
       children: [
         Container(
           decoration: BoxDecoration(
-          border: Border.all(width: 10, color: Colors.purple),
+          border: Border.all(width: 5, color: Colors.purple),
         ),
         child: SizedBox(
           height: 200,
@@ -22,7 +22,13 @@ class MainController extends StatelessWidget {
         ),
         SizedBox(
           height:200),
-        Categories(),
+
+        Container(
+          decoration: BoxDecoration(
+          border: Border.all(width: 5, color: Colors.yellow),
+        ),
+          child: Categories(),
+          ),
       ],
     );
   }

@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       ),
 
       home:Scaffold(
-        backgroundColor: const Color.fromARGB(255, 179, 97, 109),
+        backgroundColor: const Color.fromARGB(255, 235, 203, 207),
         appBar: AppBar(
           backgroundColor: Colors.green,
           title: Center(child: Text("Mon application")),
